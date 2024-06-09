@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+div.page1{
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: relative;
+    overflow: hidden;
+}
+
+div.image{
+    background-image: url("heart.png");
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    animation-name: heart;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    
+}
+
+@keyframes heart{
+    0%{
+        opacity: 1;
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+        opacity: 0;
+        transform: translate(-50%,-1000%);
+
+    }
+}
